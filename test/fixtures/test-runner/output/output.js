@@ -403,3 +403,11 @@ test('assertion errors display actual and expected properly', async () => {
     throw err;
   }
 });
+
+test('test only is false and not in only mode', { only: false }, async (t) => {
+  await t.test('running subtest 1');
+});
+
+test('t.test only is false and not in only mode', async (t) => {
+  await t.test('running subtest 1', { only: false });
+});

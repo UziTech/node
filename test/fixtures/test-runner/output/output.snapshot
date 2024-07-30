@@ -699,8 +699,30 @@ not ok 61 - assertion errors display actual and expected properly
   stack: |-
     *
   ...
+# Subtest: test only is false and not in only mode
+    # Subtest: running subtest 1
+    ok 1 - running subtest 1
+      ---
+      duration_ms: *
+      ...
+    1..1
+ok 62 - test only is false and not in only mode
+  ---
+  duration_ms: *
+  ...
+# Subtest: t.test only is false and not in only mode
+    # Subtest: running subtest 1
+    ok 1 - running subtest 1
+      ---
+      duration_ms: *
+      ...
+    1..1
+ok 63 - t.test only is false and not in only mode
+  ---
+  duration_ms: *
+  ...
 # Subtest: invalid subtest fail
-not ok 62 - invalid subtest fail
+not ok 64 - invalid subtest fail
   ---
   duration_ms: *
   location: '/test/fixtures/test-runner/output/output.js:(LINE):7'
@@ -710,7 +732,7 @@ not ok 62 - invalid subtest fail
   stack: |-
     *
   ...
-1..62
+1..64
 # Error: Test "unhandled rejection - passes but warns" at test/fixtures/test-runner/output/output.js:(LINE):1 generated asynchronous activity after the test ended. This activity created the error "Error: rejected from unhandled rejection fail" and would have caused the test to fail, but instead triggered an unhandledRejection event.
 # Error: Test "async unhandled rejection - passes but warns" at test/fixtures/test-runner/output/output.js:(LINE):1 generated asynchronous activity after the test ended. This activity created the error "Error: rejected from async unhandled rejection fail" and would have caused the test to fail, but instead triggered an unhandledRejection event.
 # Error: A resource generated asynchronous activity after the test ended. This activity created the error "Error: uncaught from outside of a test" which triggered an uncaughtException event, caught by the test runner.
@@ -718,9 +740,9 @@ not ok 62 - invalid subtest fail
 # Error: Test "immediate reject - passes but warns" at test/fixtures/test-runner/output/output.js:(LINE):1 generated asynchronous activity after the test ended. This activity created the error "Error: rejected from immediate reject fail" and would have caused the test to fail, but instead triggered an unhandledRejection event.
 # Error: Test "callback called twice in different ticks" at test/fixtures/test-runner/output/output.js:(LINE):1 generated asynchronous activity after the test ended. This activity created the error "Error [ERR_TEST_FAILURE]: callback invoked multiple times" and would have caused the test to fail, but instead triggered an uncaughtException event.
 # Error: Test "callback async throw after done" at test/fixtures/test-runner/output/output.js:(LINE):1 generated asynchronous activity after the test ended. This activity created the error "Error: thrown from callback async throw after done" and would have caused the test to fail, but instead triggered an uncaughtException event.
-# tests 76
+# tests 80
 # suites 0
-# pass 35
+# pass 39
 # fail 25
 # cancelled 3
 # skipped 9
